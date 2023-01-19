@@ -19,10 +19,10 @@ class Mengajar extends Model
     }
     public function mapel()
     {
-        return $this->belongsTo(Guru::class,'mapel_id', 'id');
+        return $this->belongsTo(Mapel::class,'mapel_id', 'id');
     }
     public function kelas()
     {
-        return $this->belongsTo(Guru::class,'kelas_id', 'id');
+        return $this->belongsTo(Kelas::class,'kelas_id', 'id');
     }
 }

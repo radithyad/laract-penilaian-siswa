@@ -3,7 +3,7 @@
     <center>
         <br>
             <h2>EDIT DATA MATA PELAJARAN</h2>
-            <form method="POST" action="/mapel/store">
+            <form method="POST" action="/mapel/update/{{ $mapel->id }}">
                 @csrf
                 <table width="50%">
                     <tr>
@@ -12,7 +12,7 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <center><button class="button-primary" type="submit">SIMPAN</button></center>
+                            <center><button class="button-primary" type="submit">UBAH</button></center>
                         </td>
                     </tr>
                 </table>

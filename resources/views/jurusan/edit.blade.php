@@ -12,7 +12,7 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <center><button class="button-primary" type="submit">SIMPAN</button></center>
+                            <center><button class="button-primary" type="submit">UBAH</button></center>
                         </td>
                     </tr>
                 </table>

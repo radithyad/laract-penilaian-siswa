@@ -55,7 +55,7 @@ class GuruController extends Controller
             'password' => 'required'
         ]); 
         $guru->update($data_guru);
-        return redirect('/guru/index')->with('success', 'Data Guru Berhasil Diupdate');
+        return redirect('/guru/index')->with('success', 'Data Jurusan Berhasil Diupdate');
     }
 
     public function destroy(Guru $guru)

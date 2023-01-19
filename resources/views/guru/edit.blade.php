@@ -23,11 +23,11 @@
                     </tr>
                     <tr>
                         <td width ="25%">ALAMAT</td>
-                        <td width ="25%"><textarea name="alamat" cols="30" rows="5" value="{{ $guru->alamat }}"></textarea></td>
+                        <td width ="25%"><textarea name="alamat" cols="30" rows="5">{{ $guru->alamat }}</textarea></td>
                     </tr>
                     <tr>
                         <td width ="25%">PASSWORD</td>
-                        <td width ="25%"><input type="text" name="nama_guru" value="{{ $guru->password }}"></td>
+                        <td width ="25%"><input type="text" name="password" value="{{ $guru->password }}"></td>
                     </tr>
                     <tr>
                         <td colspan="2">

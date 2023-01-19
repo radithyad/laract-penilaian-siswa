@@ -46,7 +46,7 @@ class MapelController extends Controller
         $data_mapel = $request->validate([
             'nama_mapel' => 'required'
         ]); 
-        $mapel->create($data_mapel);
+        $mapel->update($data_mapel);
         return redirect('/mapel/index')->with('success', 'Data Mata Pelajaran Berhasil Diupdate');
     }
 
@@ -59,6 +59,6 @@ class MapelController extends Controller
         }
 
         $mapel->delete();
-        return redirect('/mapel/index')->with('success', 'Data mapel Berhasil Disimpan');
+        return redirect('/mapel/index')->with('success', 'Data mapel Berhasil Dihapus');
     }
 }

@@ -53,8 +53,8 @@ class KelasController extends Controller
             'nama_kelas' => 'required',
             'jurusan_id' => 'required'
         ]); 
-        $kelas->create($data_kelas);
-        return redirect('/kelas/index')->with('success', 'Data k=Kelas Berhasil Diupdate');
+        $kelas->update($data_kelas);
+        return redirect('/kelas/index')->with('success', 'Data Kelas Berhasil Diupdate');
     }
 
     public function destroy(Kelas $kelas)

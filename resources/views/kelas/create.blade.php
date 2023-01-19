@@ -15,7 +15,7 @@
                         <td width ="25%">
                             <select name="jurusan_id">
                                 <option></option>
-                                @foreach ($jurusan as$j)
+                                @foreach ($jurusan as $j)
                                     <option value="{{ $j->id }}">{{ $j->nama_jurusan }}</option>
                                 @endforeach
                             </select>
