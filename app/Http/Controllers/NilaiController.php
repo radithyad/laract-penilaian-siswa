@@ -10,14 +10,19 @@ class NilaiController extends Controller
 {
     public function index()
     {
-        return view('nilai.index', [
-            'nilai' => Nilai::all()
-        ]);
+        if (session('user')->role == 'guru'){
+            $nilai = Nilai::whereHas('mengajar', function ($query) {
+                $query->where('guru_id', session('user')->id);
+            })->get();
+        } else {
+            $nilai = Nilai::where('siswa_id', session('user')->id)->get();
+        }
+        return view('nilai.index', ['nilai' => $nilai]);
     }
 
     public function create()
     {
-        // $mengajar = Mengajar::where('guru_id', session('user')->id);
+        $mengajar = Mengajar::where('guru_id', session('user')->id);
         return view('nilai.create', [
             'mengajar' => Mengajar::all(),
             'siswa' => Siswa::all()
@@ -57,7 +62,7 @@ class NilaiController extends Controller
     public function update(Request $request, Nilai $nilai)
     {
         $data_nilai = $request -> validate([
-            'mengajar' => 'required',
+            'mengajar_id' => 'required',
             'siswa_id' => 'required',
             'uh' => 'required|numeric',
             'uts' => 'required|numeric',

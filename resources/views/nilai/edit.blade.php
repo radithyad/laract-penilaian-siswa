@@ -12,7 +12,7 @@
                             <select name="mengajar_id">
                                 <option></option>
                                 @foreach ($mengajar as $each)
-                                    <option value="{{ $each->id }}" @if ($each->id == $nilai->mengajar->mengajar_id) selected @endif>
+                                    <option value="{{ $each->id }}" @if ($each->id == $nilai->mengajar_id) selected @endif>
                                     {{ $each->mapel->nama_mapel }}</option>
                                 @endforeach
                             </select>

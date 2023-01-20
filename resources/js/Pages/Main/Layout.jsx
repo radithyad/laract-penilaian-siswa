@@ -15,7 +15,7 @@ const Layout = ({children}) => {
         <div className='menu'>
             <b>
                 <a href='/home'>HOME</a>
-                {/* {user?.role == "admin" ? ( */}
+                {user?.role == "admin" ? ( 
                     <>
                         <a href='/guru/index'>GURU</a>
                         <a href='/jurusan/index'>JURUSAN</a>
@@ -24,9 +24,9 @@ const Layout = ({children}) => {
                         <a href='/mapel/index'>MATA PELAJARAN</a>
                         <a href='/mengajar/index'>MENGAJAR</a>
                     </>
-                {/* ) : ( */}
+                ) : ( 
                     <a href='/nilai/index'>NILAI</a>
-                {/* )} */}
+                )} 
                 <a href='/logout'>LOGOUT</a>
             </b>
         </div>
